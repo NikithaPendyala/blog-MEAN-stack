@@ -1,0 +1,25 @@
+
+
+<div style="text-align: center">
+    <button type="button" class="btn btn-default" (click)="viewcomments()">Comments<span class="glyphicon glyphicon-menu-down"></span></button> &nbsp;
+    <button type="button" class="btn btn-default" (click)="liked()">Like <span class="glyphicon glyphicon-thumbs-up"></span></button> &nbsp; 
+    <button type="button" [routerLink]="['/listpost', postid]" class="btn btn-default">ViewPost <span class="glyphicon glyphicon-fullscreen"></span></button> &nbsp;   
+    <div *ngIf=lflag>
+        <div class="label label-default" [title]="noOfLikes">{{noOfLikes.length}}</div>  
+     </div>
+        <div *ngIf="cflag">
+        <div *ngFor="let comm of commdata.Comments" >
+            <span class="label label-default">{{comm.commentator}}</span>: {{comm.comment}}
+        </div>
+        </div>
+    <form class="form-inline" *ngIf="cflag">
+        <div class="form-group">
+            <label class="sr-only" for="exampleInputEmail3">Comment</label>
+            <input type="email" class="form-control" id="exampleInputEmail3" name="comments" [(ngModel)]="comments" placeholder="Enter Comments">
+        </div>
+        <button type="submit" class="btn btn-success" (click)="savecom()">Done</button>
+    </form>
+</div>
+
+    
+

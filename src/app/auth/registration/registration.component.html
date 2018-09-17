@@ -1,0 +1,13 @@
+<form class="container">
+    <h1>REGISTRATION PAGE</h1>
+    <div>
+        USERNAME:<input type="text" name="username" [(ngModel)]="registerform.username"  class="form-control" placeholder="enter username" /><br>
+        PASSWORD:<input type="text" name="password" [(ngModel)]="registerform.password"  class="form-control" placeholder="enter password" /><br>
+        FIRSTNAME:<input type="text" name="fname" [(ngModel)]="registerform.firstname"  class="form-control" placeholder="enter firstname" /><br>
+        LASTNAME:<input type="text" name="lname" [(ngModel)]="registerform.lastname"  class="form-control" placeholder="enter lastname" /><br>
+        EMAIL:<input type="text" name="email" [(ngModel)]="registerform.email"  class="form-control" placeholder="enter email" /><br>
+        LOCATION:<input type="text" name="location" [(ngModel)]="registerform.location"  class="form-control" placeholder="enter location" /><br>
+        PHONE NUMBER:<input type="text" name="phone" [(ngModel)]="registerform.phone"  class="form-control" placeholder="enter ph.no" /><br>
+    <input type="button" value="register" class="btn btn-primary" (click)="register()" />
+    </div>
+    </form>

@@ -1,0 +1,11 @@
+
+<div>
+<button type="button" class="btn btn-default" (click)="edit()">Edit<span class="glyphicon glyphicon-menu-down"></span></button>
+</div>
+<div *ngIf="eflag">
+  <p>
+  <label>Post Title:</label><input type="text" class="form-control" name="title" [(ngModel)]="update.title" placeholder="Enter title for your post"><br><br>
+  <label>Post Description:</label><textarea class="form-control" name="description" [(ngModel)]="update.description" rows="5" placeholder="Describe post"></textarea>
+  <button type="submit" class="btn btn-primary" (click)="updatefn()">Update</button>
+  </p>
+</div>

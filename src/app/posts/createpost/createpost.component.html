@@ -1,0 +1,6 @@
+<h1>Please Fill</h1>
+<p>
+  <label>Post Title:</label><input type="text" class="form-control" name="title" [(ngModel)]="createdetails.title" placeholder="Enter title for your post"><br><br>
+  <label>Post Description:</label><textarea class="form-control" name="description" [(ngModel)]="createdetails.description" rows="5" placeholder="Describe post"></textarea>
+  <button type="submit" class="btn btn-primary" (click)="post()">Submit</button>
+</p>

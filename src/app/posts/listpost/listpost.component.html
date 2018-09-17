@@ -1,0 +1,17 @@
+<h1>Posts</h1>
+
+<div class="panel panel-success" *ngFor="let post of postsdata">
+
+  <div class="panel-heading">{{post.Post_title}}</div>
+  
+  <div class="panel-body"> {{post.Post_description}} <br><br>
+
+    <span class="label label-danger"> Created by:</span> {{  post.createdby}} <br><br>
+    
+    
+      <app-addcomments [postid]="post._id"></app-addcomments>
+      <app-edit [editid]="post._id"></app-edit>
+    <button type="button" (click)="delete(post._id)">Delete<span class="glyphicon glyphicon-trash"></span></button>
+  </div>
+</div>
+

@@ -1,0 +1,16 @@
+
+<h1>Selected Post</h1>
+<div class="panel panel-success">
+  <div class="panel-heading">{{specificpost.Post_title}}</div>
+  
+  <div class="panel-body"> {{specificpost.Post_description}} </div>
+
+  <div class="panel-footer"> <span class="label label-danger"> Created by:</span> {{  specificpost.createdby}} <br><br>
+
+    <button type="button" (click)="back()" class="btn btn-primary"><span class="glyphicon glyphicon-chevron-left"></span>Back</button>
+
+  
+  </div>
+</div>
+
+<!-- <router-outlet></router-outlet> -->
